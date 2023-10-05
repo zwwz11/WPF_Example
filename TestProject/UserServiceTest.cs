@@ -1,6 +1,6 @@
 ﻿
-using WpfApp1.Model;
-using WpfApp1.Service;
+using WpfApp1.Models;
+using WpfApp1.Services;
 
 namespace TestProject
 {
