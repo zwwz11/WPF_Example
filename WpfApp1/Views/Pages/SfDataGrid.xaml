@@ -1,0 +1,46 @@
+﻿<local:BasePage
+      xmlns:local="clr-namespace:WpfApp1.View.Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Syncfusion="http://schemas.syncfusion.com/wpf" 
+      xmlns:viewmodel="clr-namespace:WpfApp1.ViewModels" 
+      x:Class="WpfApp1.Views.Pages.SfDataGrid"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SfDataGrid">
+    <Page.DataContext>
+        <viewmodel:UserViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Syncfusion:SfDataGrid Height="430" Margin="10,0,10,0" VerticalAlignment="Center" ItemsSource="{Binding Users}" />
+        <Syncfusion:ButtonAdv Margin="501,71,172,347"></Syncfusion:ButtonAdv>
+        <Syncfusion:SfLinearProgressBar HorizontalAlignment="Left" Height="20" Margin="501,292,0,0" Progress="70" VerticalAlignment="Top" Width="200"/>
+        <Syncfusion:SfCircularProgressBar HorizontalAlignment="Left" Height="89" Margin="528,0,0,0" Progress="70" VerticalAlignment="Center" Width="200" RenderTransformOrigin="0.5,0.5">
+            <Syncfusion:SfCircularProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-14.614"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Syncfusion:SfCircularProgressBar.RenderTransform>
+        </Syncfusion:SfCircularProgressBar>
+        <Syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="18" Margin="141,350,0,0" TextWrapping="Wrap" Text="SfTextBoxExt" VerticalAlignment="Top" Watermark="Enter a Value" Width="120"/>
+        <Syncfusion:SplitButtonAdv HorizontalAlignment="Left" Height="35" Label="Split Button" Margin="380,350,0,0" SizeMode="Normal" VerticalAlignment="Top" Width="110">
+            <Syncfusion:DropDownMenuGroup>
+                <Syncfusion:DropDownMenuItem Header="Menu Item1"/>
+                <Syncfusion:DropDownMenuItem Header="Menu Item2"/>
+                <Syncfusion:DropDownMenuItem Header="Menu Item3"/>
+            </Syncfusion:DropDownMenuGroup>
+        </Syncfusion:SplitButtonAdv>
+        <Syncfusion:DropDownButtonAdv HorizontalAlignment="Left" Height="35" Label="Dropdown Button" Margin="121,318,0,0" SizeMode="Normal" VerticalAlignment="Top" Width="75">
+            <Syncfusion:DropDownMenuGroup>
+                <Syncfusion:DropDownMenuItem Header="Menu Item1"/>
+                <Syncfusion:DropDownMenuItem Header="Menu Item2"/>
+                <Syncfusion:DropDownMenuItem Header="Menu Item3"/>
+            </Syncfusion:DropDownMenuGroup>
+        </Syncfusion:DropDownButtonAdv>
+    </Grid>
+</local:BasePage>

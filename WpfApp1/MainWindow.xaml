@@ -1,0 +1,25 @@
+﻿<syncfusion:ChromelessWindow
+                             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                             xmlns:local="clr-namespace:WpfApp1"
+                             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+                             xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="WpfApp1.MainWindow"
+                             Title="Getting Started"
+                             WindowStartupLocation="CenterScreen"
+                             av:DesignHeight="357.576" av:DesignWidth="706.144">
+    <syncfusion:SfNavigationDrawer DisplayMode="Expanded" HorizontalAlignment="Left" x:Name="sfNavi">
+        <syncfusion:SfNavigationDrawer.ContentView>
+            <Frame Source="/View/SfDataGrid.xaml"></Frame>
+        </syncfusion:SfNavigationDrawer.ContentView>
+        <syncfusion:NavigationItem Header="Menu1">
+            <syncfusion:NavigationItem Header="Menu1-1">
+            </syncfusion:NavigationItem>
+            <syncfusion:NavigationItem Header="Menu1-2">
+            </syncfusion:NavigationItem>
+        </syncfusion:NavigationItem>
+        <syncfusion:NavigationItem Header="Menu2">
+        </syncfusion:NavigationItem>
+        <syncfusion:NavigationItem Header="Menu3">
+        </syncfusion:NavigationItem>
+    </syncfusion:SfNavigationDrawer>
+</syncfusion:ChromelessWindow>
