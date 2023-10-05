@@ -1,7 +1,4 @@
-﻿using Syncfusion.SfSkinManager;
-using Syncfusion.UI.Xaml.NavigationDrawer;
-using Syncfusion.Windows.Shared;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,20 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp1.ViewModels;
-using WpfApp1.Views.Pages;
 
-namespace WpfApp1
+namespace WpfApp1.Views.Pages
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : ChromelessWindow
+    public partial class UserPage : BasePage
     {
-        public MainWindow()
+        public UserPage()
         {
-            SfSkinManager.SetTheme(this, new Theme("Windows11Light"));
-
             InitializeComponent();
         }
     }

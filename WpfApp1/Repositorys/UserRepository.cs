@@ -13,10 +13,11 @@ namespace WpfApp1.Repositorys
 
         public UserRepository()
         {
-            users = Enumerable.Range(1, 10).Select(x => new User()
+            users = Enumerable.Range(1, 100).Select(x => new User()
             {
                 ID = x,
                 Name = x.ToString(),
+                Address = x.ToString(),
                 Age = x
             }).ToList();
         }
@@ -24,6 +25,14 @@ namespace WpfApp1.Repositorys
         public List<User> GetAll()
         {
             return users;
+        }
+
+        public List<User> GetAll(User filter)
+        {
+            var filterUsers = users.Where(x => x.Name!.Contains($"{filter.Name}")).ToList();
+            filterUsers = filterUsers.Where(x => x.Address!.Contains($"{filter.Address}")).ToList();
+
+            return filterUsers;
         }
 
         public void Create(User user)
@@ -38,6 +47,7 @@ namespace WpfApp1.Repositorys
             {
                 target.Name = user.Name;
                 target.Age = user.Age;
+                target.Address = user.Address;
             }
         }
 
@@ -51,7 +61,7 @@ namespace WpfApp1.Repositorys
             return users.Find(x => x.ID == user.ID);
         }
 
-        public int GetMaxSequence()
+        public int? GetMaxSequence()
         {
             if (users.Count == 0)
                 return 1;

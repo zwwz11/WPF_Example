@@ -21,6 +21,11 @@ namespace WpfApp1.Services
             return userRepository.GetAll();
         }
 
+        public List<User> GetAllUsers(User filter)
+        {
+            return userRepository.GetAll(filter);
+        }
+
         public void CreateUser(User user)
         {
             if (user.ID != int.MinValue)
@@ -49,7 +54,7 @@ namespace WpfApp1.Services
             return userRepository.FindById(user);
         }
 
-        public int GetMaxUserSequence()
+        public int? GetMaxUserSequence()
         {
             return userRepository.GetMaxSequence();
         }

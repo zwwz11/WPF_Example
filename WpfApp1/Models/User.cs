@@ -9,11 +9,12 @@ namespace WpfApp1.Models
 {
     public class User : BaseModel
     {
-        private int id;
+        private int? id;
         private string? name;
-        private int age;
+        private string? address;
+        private int? age;
 
-        public int ID 
+        public int? ID 
         {
             get { return id; } 
             set 
@@ -33,7 +34,17 @@ namespace WpfApp1.Models
             }
         }
 
-        public int Age
+        public string? Address
+        {
+            get { return address; }
+            set
+            {
+                address = value;
+                OnPropertyChanged(nameof(Address));
+            }
+        }
+
+        public int? Age
         {
             get { return age; }
             set

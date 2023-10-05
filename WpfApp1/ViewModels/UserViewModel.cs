@@ -66,7 +66,7 @@ namespace WpfApp1.ViewModels
 
         private void Search()
         {
-            Users = new ObservableCollection<User>(userService.GetAllUsers());
+            Users = new ObservableCollection<User>(userService.GetAllUsers(currentUser));
         }
 
         private void Create()
